@@ -1,0 +1,58 @@
+@use '../abstracts/_variables' as *
+    
+*
+    box-sizing: border-box
+
+body
+    margin: $margin
+    padding: $padding
+    font:
+        family: $stack-custom-name, $stack-sans-serif
+        size: 100%
+
+@-moz-document url-prefix()
+    h1, h2, h3, h4, h5, h6, p
+        font-weight: normal
+
+html
+    -moz-osx-font-smoothing: grayscale
+    -webkit-font-smoothing: antialiased
+    font-smoothing: antialiased
+    scroll-behavior: smooth
+
+h1, h2, h3, h4, h5, h6
+    margin: $margin
+    padding: $padding
+    font:
+        family: $stack-custom-name
+        size: 100%
+
+a
+    display: block
+    text:
+        decoration: none
+        align: center
+
+ul, ol
+    margin: $margin
+    padding: $padding
+    list-style: none
+
+img
+    max-width: 100%
+    height: auto
+    vertical-align: middle
+    font-style: italic
+    background-repeat: no-repeat
+    background-size: cover
+    shape-margin: 1rem
+
+p
+    margin: $margin
+    padding: $padding
+    line-height: 1.4
+
+form
+    margin: $margin
+    padding: $padding
+

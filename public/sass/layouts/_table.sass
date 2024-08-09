@@ -1,0 +1,35 @@
+@use '../abstracts' as *
+    
+table
+    width: 100%
+    border-collapse: collapse
+
+    & > *
+        margin: $margin
+        padding: $padding
+
+    & thead 
+        background: #6158a5
+        
+        & th
+            color: #fff            
+            font-weight: 500
+
+            &:last-child
+                text-align: center
+
+    & thead th, & tbody td
+        padding: 1rem 1.875rem
+        text-align: left
+
+    & tbody tr
+        color: #5e5e5f
+
+        &:not(:last-child)
+            border-bottom: 0.0675rem solid #f0f1f2
+
+        &:last-child
+            border-radius: 0 0 0.375rem 0.375rem
+
+        & td:last-child
+            text-align: center

@@ -1,0 +1,27 @@
+@use '../abstracts' as *
+    
+textarea
+    border: none
+    padding: 1.125rem 0.9375rem
+    background: #f5f5f5
+    resize: none
+    font:
+        family: $stack-custom-name, $stack-sans-serif
+        size: 0.9rem
+
+    &:focus
+        outline: none
+
+    &::placeholder
+        font:
+            family: $stack-custom-name, $stack-sans-serif
+            size: 0.75rem
+
+        color: #f5f5f5
+
+    &::-moz-placeholder
+        font:
+            family: $stack-custom-name, $stack-sans-serif
+            size: 0.75rem
+
+        color: #f5f5f5

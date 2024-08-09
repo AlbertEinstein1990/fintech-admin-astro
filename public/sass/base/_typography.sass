@@ -1,0 +1,44 @@
+@use '../abstracts' as *
+    
++font-face('variable name', 'file name')
+
+.nav-menu
+    &__item
+        & span
+            font-size: 0.9rem
+
+        & span, & .menu-icon
+            color: $dusty-gray
+
+    &__link
+        text-align: left
+        color: $gray-chateau
+
+        &.current
+            color: $snow-white
+
+            & span
+                font-family: $stack-custom-name
+                color: $snow-white
+
+        &:not(.current):hover
+            background: $curious-blue
+
+            & span, & .menu-icon
+                color: $snow-white
+
+.card__head__title
+    font-size: 1.25rem
+    color: #2d2d2d
+
+.empty-state-text
+    font-size: 0.85rem
+    color: $dusty-gray
+
+.error-text
+    color: red
+    font:
+        size: 0.8rem
+        style: italic
+        
+    margin-left: 1rem

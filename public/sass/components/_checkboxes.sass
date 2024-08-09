@@ -1,0 +1,21 @@
+@use '../abstracts/_variables' as *
+
+input[type='checkbox']
+    display: none
+
+.menu-item-checkbox:checked 
+    & ~ .sub-menu
+        max-height: 8rem
+        margin-top: 0.5rem
+
+    & + .menu-item-label
+        background: blue
+
+        & span, & .menu-icon
+            color: $snow-white
+    
+    & + .current
+        background: blue
+
+        & span, & .menu-icon
+            color: $snow-white
