@@ -1,5 +1,6 @@
 ---
 import Layout from "@src/layouts/layout.astro";
+import Textarea from "@components/textarea.svelte";
 import 'genus-ui';
 ---
 
@@ -19,7 +20,7 @@ import 'genus-ui';
                     
                     <genus-textbox label-text="Phone Number" data-pattern="(xxx) xxx xxx xxxx" disallowed-characters="^[a-zA-Z\s!@#%^&*+=._-]+$" input-icon='/svg/phone.svg' format-input></genus-textbox>
 
-                    <genus-textarea label-text='House Address'></genus-textarea>
+                    <Textarea client:only="svelte" />
 
                     <button class='button form-button register-button'>Register</button>
                 </form>

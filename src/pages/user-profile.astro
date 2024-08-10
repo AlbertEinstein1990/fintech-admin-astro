@@ -1,0 +1,68 @@
+---
+import Layout from "@src/layouts/layout.astro";
+import DateOfBirthPicker from '@components/date-of-birth-picker.svelte';
+import Textarea from "@components/textarea.svelte";
+import { tabNames, genderOptions, disabilityOptions } from '@controllers/profile.controllers';
+import 'genus-ui';
+---
+
+<Layout title="User Profile">
+    <div class="main-content-inner inner-content">
+        <div class='card profile-card'>
+            <div class='card__head'>
+                <h4 class='card__head__title'>Profile Tabs</h4>
+            </div>
+
+            <div class='card__body'>
+                <genus-tab-container tab-names={tabNames}>
+                    <genus-tab-content>
+                        <form class='profile-form'>
+                            <genus-textbox label-text='First Name' without-icon></genus-textbox>
+                    
+                            <genus-textbox label-text='Last Name' without-icon></genus-textbox>
+
+                            <genus-radiobtn-group label-text='Gender' options={genderOptions} checked-radio-icon='svg/tick-circle.svg' name='gender'></genus-radiobtn-group>
+
+                            <DateOfBirthPicker client:only="svelte" />
+
+                            <genus-dropdown label-text='Nationality'>
+                                <genus-dropdown-option option-value='african-american'>African American</genus-dropdown-option>
+                                <genus-dropdown-option option-value='black'>Black</genus-dropdown-option>
+                                <genus-dropdown-option option-value='british'>British</genus-dropdown-option>
+                                <genus-dropdown-option option-value='canadian'>Canadian</genus-dropdown-option>
+                            </genus-dropdown>
+
+                            <genus-radiobtn-group label-text='Any Physical Disabilities ?' options={disabilityOptions} checked-radio-icon='svg/tick-circle.svg' name='ability'></genus-radiobtn-group>
+                        </form>
+                    </genus-tab-content>
+
+                    <genus-tab-content>
+                        <form class='profile-form'>
+                            <genus-textbox label-text='Email' input-type='email' input-icon='svg/message.svg'></genus-textbox>
+                    
+                            <genus-textbox label-text="Enter phone number" data-pattern="(xxx) xxx xxx xxxx" disallowed-characters="^[a-zA-Z\s!@#%^&*+=._-]+$" input-icon='svg/phone.svg' format-input></genus-textbox>
+
+                            <genus-dropdown label-text='Country' search-placeholder-text='Search for a country' with-filter>
+                                <genus-dropdown-option option-value='african-american'>African American</genus-dropdown-option>
+                                <genus-dropdown-option option-value='black'>Black</genus-dropdown-option>
+                                <genus-dropdown-option option-value='british'>British</genus-dropdown-option>
+                                <genus-dropdown-option option-value='canadian'>Canadian</genus-dropdown-option>
+                            </genus-dropdown>
+
+                            <genus-dropdown label-text='City' search-placeholder-text='Search for a city' with-filter>
+                                <genus-dropdown-option option-value='african-american'>African American</genus-dropdown-option>
+                                <genus-dropdown-option option-value='black'>Black</genus-dropdown-option>
+                                <genus-dropdown-option option-value='british'>British</genus-dropdown-option>
+                                <genus-dropdown-option option-value='canadian'>Canadian</genus-dropdown-option>
+                            </genus-dropdown>
+
+                            <Textarea />
+                        </form>
+                    </genus-tab-content>
+                    
+                    <genus-tab-content></genus-tab-content>
+                </genus-tab-container>
+            </div>
+        </div>
+    </div>
+</Layout>

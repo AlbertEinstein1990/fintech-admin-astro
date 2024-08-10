@@ -5,16 +5,14 @@ const tabNames = JSON.stringify(
         { value: 'account-information', label: 'Account Information' }
     ]);
 
-const genderOptions = JSON.stringify(
-    [
-        { value: 'male', label: 'Male' },
-        { value: 'famale', label: 'Female' }
-    ])
+const genderOptions = [
+    { value: 'male', label: 'Male' },
+    { value: 'famale', label: 'Female' }
+]
 
-const disabilityOptions = JSON.stringify(
-    [
-        { value: 'yes', label: 'Yes' },
-        { value: 'no', label: 'No' }
-    ])
+const disabilityOptions = [
+    { value: 'yes', label: 'Yes' },
+    { value: 'no', label: 'No' }
+]
 
 export { tabNames, genderOptions, disabilityOptions }

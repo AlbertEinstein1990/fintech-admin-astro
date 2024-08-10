@@ -1,5 +1,7 @@
 ---
 import Layout from "@src/layouts/layout.astro";
+import DatePicker from "@components/date-picker.svelte";
+import DatePickerNoLabel from "@components/date-picker-no-label.svelte";
 import { languages, headers, transactions, specificColumns } from '@controllers/components.controllers.js';
 import 'genus-ui';
 ---
@@ -110,23 +112,9 @@ import 'genus-ui';
                 </div>
             </div>
             
-            <!-- <div class='card input-card'>
-                <div class='card__head'>
-                    <h4 class='card__head__title'>Date Picker | Default</h4>
-                </div>
-                <div class='card__body'>
-                    <genus-date-picker label-text="Select Date" display-position='top' input-icon='svg/calendar.svg'></genus-date-picker>
-                </div>
-            </div>
-            
-            <div class='card input-card'>
-                <div class='card__head'>
-                    <h4 class='card__head__title'>Date Picker | Without Label</h4>
-                </div>
-                <div class='card__body'>
-                    <genus-date-picker label-text="Select Date" placeholder-text='Select a date' display-position='top' input-icon='svg/calendar.svg' without-label></genus-date-picker>
-                </div>
-            </div> -->
+            <DatePicker displayPosition='top' client:only="svelte" />
+
+            <DatePickerNoLabel client:only="svelte" />            
         </div>
 
         <div class='data-section section'>

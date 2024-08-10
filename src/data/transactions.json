@@ -1,0 +1,122 @@
+[
+    {
+        "transaction_id": "T12345",
+        "type": "credit",
+        "amount": 150.75,
+        "currency": "USD",
+        "date": "2024-08-01",
+        "description": "Salary Payment"
+    },
+    {
+        "transaction_id": "T12346",
+        "type": "debit",
+        "amount": 50.25,
+        "currency": "USD",
+        "date": "2024-08-02",
+        "description": "Grocery Shopping"
+    },
+    {
+        "transaction_id": "T12347",
+        "type": "credit",
+        "amount": 200.00,
+        "currency": "USD",
+        "date": "2024-08-03",
+        "description": "Freelance Project"
+    },
+    {
+        "transaction_id": "T12348",
+        "type": "debit",
+        "amount": 75.00,
+        "currency": "USD",
+        "date": "2024-08-04",
+        "description": "Restaurant Bill"
+    },
+    {
+        "transaction_id": "T12349",
+        "type": "debit",
+        "amount": 30.50,
+        "currency": "USD",
+        "date": "2024-08-05",
+        "description": "Gas Station"
+    },
+    {
+        "transaction_id": "T12350",
+        "type": "credit",
+        "amount": 500.00,
+        "currency": "USD",
+        "date": "2024-08-06",
+        "description": "Stock Dividend"
+    },
+    {
+      "transaction_id": "T12351",
+      "type": "debit",
+      "amount": 120.00,
+      "currency": "USD",
+      "date": "2024-08-07",
+      "description": "Electricity Bill"
+    },
+    {
+      "transaction_id": "T12352",
+      "type": "debit",
+      "amount": 45.00,
+      "currency": "USD",
+      "date": "2024-08-08",
+      "description": "Gym Membership"
+    },
+    {
+      "transaction_id": "T12353",
+      "type": "credit",
+      "amount": 300.00,
+      "currency": "USD",
+      "date": "2024-08-09",
+      "description": "Gift from Family"
+    },
+    {
+      "transaction_id": "T12354",
+      "type": "debit",
+      "amount": 60.00,
+      "currency": "USD",
+      "date": "2024-08-10",
+      "description": "Internet Bill"
+    },
+    {
+      "transaction_id": "T12355",
+      "type": "debit",
+      "amount": 15.00,
+      "currency": "USD",
+      "date": "2024-08-11",
+      "description": "Coffee Shop"
+    },
+    {
+      "transaction_id": "T12356",
+      "type": "credit",
+      "amount": 100.00,
+      "currency": "USD",
+      "date": "2024-08-12",
+      "description": "Cashback Reward"
+    },
+    {
+      "transaction_id": "T12357",
+      "type": "debit",
+      "amount": 40.00,
+      "currency": "USD",
+      "date": "2024-08-13",
+      "description": "Movie Tickets"
+    },
+    {
+      "transaction_id": "T12358",
+      "type": "credit",
+      "amount": 75.00,
+      "currency": "USD",
+      "date": "2024-08-14",
+      "description": "Refund"
+    },
+    {
+      "transaction_id": "T12359",
+      "type": "debit",
+      "amount": 250.00,
+      "currency": "USD",
+      "date": "2024-08-15",
+      "description": "Rent Payment"
+    }
+]
