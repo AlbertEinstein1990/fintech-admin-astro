@@ -1,0 +1,43 @@
+---
+import Layout from "@src/layouts/layout.astro";
+import 'genus-ui';
+---
+
+<Layout title="Login Form">
+    <div class="main-content-inner inner-content">
+        <div class='forms-section section'>
+            <div class='card form-card'>
+                <div class='card__head'>
+                    <h4 class='card__head__title'>Sign In | Email and Password</h4>
+                </div>
+                <div class='card__body'>
+                    <genus-textbox label-text='Email' input-type='email' input-icon='/svg/message.svg'></genus-textbox>
+                    <genus-textbox label-text='Password' input-type='password' input-icon='/svg/password.svg'></genus-textbox>
+                    <button class='button form-button'>Login</button>
+                </div>
+            </div>
+            
+            <div class='card form-card'>
+                <div class='card__head'>
+                    <h4 class='card__head__title'>Sign In | Username and Password</h4>
+                </div>
+                <div class='card__body'>
+                    <genus-textbox label-text='Username' input-icon='/svg/profile.svg'></genus-textbox>
+                    <genus-textbox label-text='Password' input-type='password' input-icon='/svg/password.svg'></genus-textbox>
+                    <button class='button form-button'>Login</button>
+                </div>
+            </div>
+            
+            <div class='card form-card'>
+                <div class='card__head'>
+                    <h4 class='card__head__title'>Sign In | Phone Number and Password</h4>
+                </div>
+                <div class='card__body'>
+                    <genus-textbox label-text='Phone Number' input-icon='/svg/phone.svg'></genus-textbox>
+                    <genus-textbox label-text='Password' input-type='password' input-icon='/svg/password.svg'></genus-textbox>
+                    <button class='button form-button'>Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>

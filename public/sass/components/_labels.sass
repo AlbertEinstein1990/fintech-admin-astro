@@ -1,0 +1,20 @@
+@use '../abstracts/_variables' as *
+
+.menu-item-label
+    padding: 0.6rem 0.8rem
+    border-radius: 0.5rem
+    transition: all .4s linear
+    color: $dusty-gray
+
+    &:hover
+        cursor: pointer
+        background: $deluge
+        color: $snow-white
+
+    &.current
+        background: $whisper
+        color: $deluge
+
+genus-tab-container
+    --tab-background-color: #edecf5
+    --active-tab-background-color: #726aaf

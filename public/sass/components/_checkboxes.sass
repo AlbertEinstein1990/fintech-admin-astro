@@ -9,13 +9,17 @@ input[type='checkbox']
         margin-top: 0.5rem
 
     & + .menu-item-label
-        background: blue
-
-        & span, & .menu-icon
-            color: $snow-white
+        background: $deluge
+        color: $snow-white
+        font-family: $stack-product-sans-bold
+            
     
     & + .current
-        background: blue
+        background: $deluge
+        color: $snow-white
 
-        & span, & .menu-icon
-            color: $snow-white
+genus-checkbox-group
+    --checkbox-label-background-color: #edecf5
+    --checked-checkbox-background-color: #726aaf
+    --checkbox-label-padding: 0.8rem 0.75rem
+            

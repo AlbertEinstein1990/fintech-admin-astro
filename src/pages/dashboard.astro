@@ -1,0 +1,35 @@
+---
+import Layout from "@src/layouts/layout.astro";
+import PlatformActivities from "@components/charts/platform-activities.svelte";
+import MonthlyExpensesChart from '@components/charts/monthly-expenses.svelte';
+import { recentLoans, headers } from '@controllers/dashboard.controllers';
+import 'genus-ui';
+---
+
+<Layout title="Dashboard">
+    <div class="main-content-inner inner-content">
+        <div class='data-cards-section section'>
+            <genus-data-card class='account-balance-card' card-title='Account Balance' card-value='$ 1000.00' data-card-icon='svg/dollar-sign.svg'></genus-data-card>
+            
+            <genus-data-card class='loan-products-card' card-title='Loan Products' card-value='20' data-card-icon='svg/money bag.svg'></genus-data-card>
+            
+            <genus-data-card class='loan-applications-card' card-title='Loan Applications' card-value='20' data-card-icon='svg/document.svg'></genus-data-card>
+            
+            <genus-data-card class='users-card' card-title='New Customers' card-value='300' data-card-icon='svg/users.svg'></genus-data-card>
+        </div>
+
+        <div class='charts-section section'>
+            <PlatformActivities client:only="svelte" />
+            
+            <MonthlyExpensesChart client:only="svelte" />
+        </div>
+
+        <div class='recent-loans section'>
+            <genus-table 
+                table-title='Recent Loans' 
+                table-headers={headers}
+                data-source={recentLoans}>
+            </genus-table>
+        </div>
+    </div>
+</Layout>

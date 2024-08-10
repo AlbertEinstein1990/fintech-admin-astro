@@ -1,0 +1,50 @@
+---
+import Header from '@components/header.astro';
+import Footer from '@components/footer.astro';
+import NavMenu from '@components/nav-menu.astro';
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/iconly/css/style.css">
+		<meta name="viewport" content="width=device-width" />
+		<title>{title} | Fintech Admin Dashboard</title>
+	</head>
+	<body>
+		<div class="app-container">
+            <div class="sidebar">
+                <div class="sidebar__top">
+                    <div class="logo-container">
+                        <div class="logo"></div>
+                    </div>
+
+                    <NavMenu />
+                </div>
+
+                <div class="sidebar__bottom">
+                    <form class="logout-form" action="/logout" method="post">
+                        <button class="logout-button nav-menu__link" type="submit">
+                            <i class="iconly-Logout icbo menu-icon"></i>
+                            <span>Logout</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <Header title={title} />
+
+                <div class="main-content">
+                    <slot />
+                </div>
+
+                <Footer />
+            </div>
+        </div>
+	</body>
+</html>

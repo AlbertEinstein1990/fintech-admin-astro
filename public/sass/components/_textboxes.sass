@@ -5,7 +5,7 @@ input[type='text'], input[type='email']
     padding: 1.125rem 0.9375rem
     background: #f5f5f5
     font:
-        family: $stack-custom-name, $stack-sans-serif
+        family: $stack-product-sans-regular, $stack-sans-serif
         size: 0.9rem
 
     &:focus
@@ -13,14 +13,14 @@ input[type='text'], input[type='email']
 
     &::placeholder
         font:
-            family: $stack-custom-name, $stack-sans-serif
+            family: $stack-product-sans-regular, $stack-sans-serif
             size: 0.75rem
 
         color: #f5f5f5
 
     &::-moz-placeholder
         font:
-            family: $stack-custom-name, $stack-sans-serif
+            family: $stack-product-sans-regular, $stack-sans-serif
             size: 0.75rem
 
         color: #f5f5f5
@@ -28,3 +28,10 @@ input[type='text'], input[type='email']
 @-moz-document url-prefix()
     input[type='text'], input[type='email']
         width: -moz-available
+
+genus-textbox, genus-date-picker
+    --input-background-color: none
+    --icon-container-background-color: none
+    --input-border: 0.0625rem solid #cfd1d4
+    --icon-container-border: 0.0625rem solid #cfd1d4
+    --input-padding: 0.8rem

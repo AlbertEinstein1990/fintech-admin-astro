@@ -1,0 +1,9 @@
+<svg width="15" height="15" class="radio-icon-svg checked-svg" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .radio-icon-svg circle { fill: #fff; }
+        .checked-svg path { stroke: #726aaf; }
+    </style>
+
+    <circle cx="7.5" cy="7.5" r="7.5"/>
+    <path d="M5 8.005L6.892 9.898L10.79 6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

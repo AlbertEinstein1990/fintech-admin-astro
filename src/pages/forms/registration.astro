@@ -1,0 +1,29 @@
+---
+import Layout from "@src/layouts/layout.astro";
+import 'genus-ui';
+---
+
+<Layout title="Registration Form">
+    <div class='main-content-inner inner-content'>
+        <div class='card form-card registion-form-card'>
+            <div class='card__head'>
+                <h4 class='card__head__title'>Registration Form</h4>
+            </div>
+            <div class='card__body'>
+                <form class='action-form'>
+                    <genus-textbox label-text='First Name' without-icon></genus-textbox>
+                    
+                    <genus-textbox label-text='Last Name' without-icon></genus-textbox>
+                    
+                    <genus-textbox label-text='Email' input-type='email' input-icon='/svg/message.svg'></genus-textbox>
+                    
+                    <genus-textbox label-text="Phone Number" data-pattern="(xxx) xxx xxx xxxx" disallowed-characters="^[a-zA-Z\s!@#%^&*+=._-]+$" input-icon='/svg/phone.svg' format-input></genus-textbox>
+
+                    <genus-textarea label-text='House Address'></genus-textarea>
+
+                    <button class='button form-button register-button'>Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</Layout>

@@ -1,35 +1,95 @@
 @use '../abstracts' as *
-    
-+font-face('variable name', 'file name')
+
++font-face($stack-poppins-medium, 'Poppins-Medium')
++font-face($stack-poppins-semi-bold, 'Poppins-SemiBold')
++font-face($stack-product-sans-regular, 'ProductSans-Regular')
++font-face($stack-product-sans-bold, 'ProductSans-Bold')
 
 .nav-menu
     &__item
         & span
-            font-size: 0.9rem
-
-        & span, & .menu-icon
-            color: $dusty-gray
+            font-size: 0.95rem
 
     &__link
         text-align: left
-        color: $gray-chateau
+        color: $dusty-gray
 
         &.current
-            color: $snow-white
-
-            & span
-                font-family: $stack-custom-name
-                color: $snow-white
+            color: $deluge
 
         &:not(.current):hover
-            background: $curious-blue
+            color: $snow-white
 
-            & span, & .menu-icon
-                color: $snow-white
+
+.page-title
+    font-size: 1.25rem
+    color: $victoria
+
+genus-data-card
+    --card-title-font-family: 'Poppins Semi Bold'
+    --card-title-font-size: 0.9rem
+    --card-title-color: #2f295d
+    --card-text-font-family: 'Product Sans Regular'
+    --card-text-font-size: 1rem
+    --card-text-color: #999999
+
+genus-chart
+    --chart-title-font-family: 'Poppins Semi Bold'
+    --chart-title-font-size: 1rem
+    --chart-title-color: #2f295d
+
+genus-table
+    --table-title-font-family: 'Poppins Semi Bold'
+    --table-title-font-size: 1rem
+    --table-title-color: #2f295d
+    --th-font-family: 'Product Sans Regular'
+    --th-font-color: #726aaf
+    --th-font-size: 0.95rem
+
+genus-textbox, genus-date-picker, genus-dropdown
+    --input-label-font-family: 'Product Sans Regular'
+    --input-label-font-size: 0.9rem
+    --input-label-color: #70747e
+    --input-font-color: #726aaf
+
+genus-textarea
+    --textarea-label-font-family: 'Product Sans Regular'
+    --textarea-label-font-size: 0.9rem
+    --textarea-label-color: #70747e
+    --textarea-font-color: #726aaf
+
+genus-checkbox-group, genus-radiobtn-group
+    --group-label-font-family: 'Product Sans Regular'
+    --group-label-font-color: #70747e
+    --label-text-font-color: #726aaf
+
+.footer-inner
+    font-size: 0.9rem
+
+    & p
+        color: $mako
+
+    & a
+        color: $victoria
+        font-family: $stack-poppins-medium
 
 .card__head__title
     font-size: 1.25rem
     color: #2d2d2d
+
+.input-card .card__head__title, .form-card .card__head__title, .profile-card .card__head__title
+    font:
+        family: $stack-poppins-semi-bold
+        size: 1rem
+        weight: normal
+    
+    color: $jacarta
+
+genus-tab-container
+    --tab-font-family: 'Poppins Medium'
+    --tab-font-size: 0.9rem
+    --tab-font-color: #64468c
+    --active-tab-font-color: #fff
 
 .empty-state-text
     font-size: 0.85rem
@@ -40,5 +100,5 @@
     font:
         size: 0.8rem
         style: italic
-        
+
     margin-left: 1rem

@@ -7,9 +7,6 @@
 .main-content-inner
     +css-grid($template-columns: repeat(12, 1fr), $auto-rows: max-content, $gap: 1.875rem)
 
-.menu-item-label
-    +css-grid($template-columns: max-content 1fr max-content, $column-gap: 0.5rem, $align-items: center)
-
 .modal-form
     +css-grid($template-columns: repeat(4, 1fr), $column-gap: 1rem)
 
@@ -19,3 +16,12 @@
 .data-card-loader
     +css-grid($template-columns: max-content 1fr, $template-rows: repeat(2, max-content), $column-gap: 1rem, $row-gap: 0.5rem)
     grid-template-areas: 'ic tll' 'ic bll'
+
+.menu-item-label
+    +css-grid($template-columns: max-content 1fr max-content, $column-gap: 0.5rem, $align-items: center)
+
+.charts-section
+    +css-grid($template-columns: repeat(2, calc(50% - 0.9375rem)), $column-gap: 1.875rem)
+
+.action-form, .profile-form
+    +css-grid($template-columns: repeat(2, 1fr), $column-gap: 1.5625rem, $row-gap: 1.875rem)

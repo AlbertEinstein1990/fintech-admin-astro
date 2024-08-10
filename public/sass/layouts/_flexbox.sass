@@ -1,5 +1,11 @@
 @use '../abstracts/_mixins' as *
 
+.content-container, .input-card .card__body > *
+    +flexbox($justify-content: null, $flex-direction: column)
+    
+.empty-state-container
+    +flexbox($justify-content: null, $align-items: center, $flex-direction: column, $row-gap: 0.5rem)
+
 .header-inner, .footer-inner
     +flexbox($align-items: center)
 
@@ -8,6 +14,18 @@
 
 .nav-menu__link
     +flexbox($justify-content: null, $align-items: center, $column-gap: 0.5rem)
-    
-.empty-state-container
-    +flexbox($justify-content: null, $align-items: center, $flex-direction: column, $row-gap: 0.5rem)
+
+.data-cards-section
+    +flexbox($justify-content: null, $align-items: center, $column-gap: 1.875rem)
+
+    & > *
+        flex: 1 0 calc(25% - 1.875rem)
+
+.input-controls, .forms-section
+    +flexbox($justify-content: null, $column-gap: 1.875rem)
+
+    & > *
+        flex: 1 0 calc(30% - 0.9375rem)
+
+.form-card .card__body
+    +flexbox($justify-content: null, $flex-direction: column, $row-gap: 1.25rem)

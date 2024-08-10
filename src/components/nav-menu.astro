@@ -1,0 +1,64 @@
+<ul class="nav-menu">
+    <li class="nav-menu__item">
+        <a class="nav-menu__link" href="/dashboard">
+            <i class="iconly-Home icbo menu-icon"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+    
+    <li class="nav-menu__item">
+        <a class="nav-menu__link" href="/ui-components">
+            <i class="iconly-Category icbo menu-icon"></i>
+            <span>UI Components</span>
+        </a>
+    </li>
+
+    <li class="nav-menu__item">
+        <input class="menu-item-checkbox" 
+        type="checkbox" id="forms-menu-item-checkbox">
+        
+        <label class="label menu-item-label" for="forms-menu-item-checkbox">
+            <i class="iconly-User2 icbo menu-icon"></i>
+            <span>Forms</span>
+            <i class="arrow-down-icon icli iconly-Arrow-Down-2 menu-icon"></i>	
+        </label>
+            
+        <ul class="sub-menu">
+            <li class="sub-menu__item">
+                <a href="/forms/login">Login Form</a>
+            </li>
+            
+            <li class="sub-menu__item">
+                <a href="/forms/registration">Registration Form</a>
+            </li>
+        </ul>
+    </li>
+    
+    <li class="nav-menu__item">
+        <a class="nav-menu__link" href="/charts">
+            <i class="iconly-Chart icbo menu-icon"></i>
+            <span>Charts</span>
+        </a>
+    </li>
+    
+    <li class="nav-menu__item">
+        <a class="nav-menu__link" href="/profile">
+            <i class="iconly-Profile icbo menu-icon"></i>
+            <span>Profile</span>
+        </a>
+    </li>
+</ul>
+
+<script>
+    const navLinks = document.querySelectorAll(".nav-menu__link");
+    const menuLabel = document.querySelector('.menu-item-label');
+    const pathName = window.location.pathname;
+    
+    navLinks.forEach(link => 
+    {
+        if (link.getAttribute('href') === pathName) { link.classList.add("current"); }
+    });
+    
+    if(pathName === '/forms/login' || pathName === '/forms/registration') { menuLabel.classList.add('current'); }
+    else { menuLabel.classList.remove('current'); }
+</script>
