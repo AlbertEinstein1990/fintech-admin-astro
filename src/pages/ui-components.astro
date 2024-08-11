@@ -119,7 +119,7 @@ import 'genus-ui';
 
         <div class='data-section section'>
             <genus-table table-title="Data Table" table-headers={JSON.stringify(headers)} data-source={JSON.stringify(transactions)} specific-columns={JSON.stringify(specificColumns)} results-per-page="4" key="id" with-pagination>
-                <div class="controls" slot="filter-controls">
+                <div class="filter-controls" slot="filter-controls">
                     <button class="filter-button button button--primary">Filter</button>
                 </div>
             </genus-table>

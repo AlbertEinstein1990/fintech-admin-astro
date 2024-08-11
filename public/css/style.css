@@ -112,6 +112,14 @@ form {
   color: #595f70;
 }
 
+.fullname {
+  color: #86d182;
+}
+
+.user-role {
+  color: #f77d4c;
+}
+
 genus-data-card {
   --card-title-font-family: "Poppins Semi Bold";
   --card-title-font-size: 0.9rem;
@@ -542,6 +550,12 @@ genus-chart {
   align-items: center;
 }
 
+.filter-controls {
+  display: flex;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
 .header {
   width: -webkit-fill-available;
   height: 6.25rem;
@@ -648,7 +662,7 @@ genus-table {
 .button {
   border: none;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 0.9rem;
   text-align: center;
   font-family: "Product Sans Regular", sans-serif;
   font-size: 0.875rem;
@@ -656,13 +670,24 @@ genus-table {
 .button:focus {
   outline: none;
 }
+.button:hover {
+  cursor: pointer;
+}
 .button--primary {
   background: #f77d4c;
   color: #fff;
 }
 .button--secondary {
-  background: #fbbea6;
-  color: #7c3f26;
+  background: #2f374c;
+  color: #fff;
+}
+
+.filter-controls .button {
+  padding: 0.65rem 1rem;
+}
+.filter-button {
+  padding: 0.6rem 0.7rem !important;
+  border-radius: 0.375rem;
 }
 
 .logout-button {
@@ -674,10 +699,6 @@ genus-table {
 }
 .logout-button:hover {
   cursor: pointer;
-}
-
-.filter-button {
-  padding: 0.6rem 1rem;
 }
 
 .form-button {

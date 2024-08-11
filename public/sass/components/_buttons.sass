@@ -3,7 +3,7 @@
 .button
     border: none
     border-radius: 0.5rem
-    padding: 1rem
+    padding: 0.9rem
     text-align: center
     font:
         family: $stack-product-sans-regular, $stack-sans-serif
@@ -12,13 +12,24 @@
     &:focus
         outline: none
 
+    &:hover
+        cursor: pointer
+
     &--primary
         background: $coral
         color: $snow-white
 
     &--secondary
-        background: $rose-bud
-        color: $nutmeg
+        background: $oxford-blue
+        color: $snow-white
+
+.filter
+    &-controls .button
+        padding: 0.65rem 1rem
+
+    &-button
+        padding: 0.6rem 0.7rem !important
+        border-radius: 0.375rem
 
 .logout-button
     width: 100%
@@ -28,10 +39,7 @@
     font-size: 0.95rem
 
     &:hover
-        cursor: pointer
-
-.filter-button
-    padding: 0.6rem 1rem
+        cursor: pointer  
 
 .form-button
     width: -webkit-fill-available
