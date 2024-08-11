@@ -234,6 +234,7 @@ genus-tab-container {
 .logo-container .logo {
   width: 11rem;
   height: 5rem;
+  background: center/contain no-repeat url("../images/logo.png");
 }
 
 .content-container {
@@ -533,6 +534,12 @@ genus-chart {
   display: flex;
   row-gap: 1.25rem;
   flex-direction: column;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
