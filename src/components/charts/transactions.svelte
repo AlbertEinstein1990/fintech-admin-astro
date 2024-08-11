@@ -18,13 +18,13 @@
                 label: 'Credit',
                 data: transactions.map(transaction => transaction.type === 'credit' && transaction.amount),
                 borderWidth: 1,
-                backgroundColor: 'rgba(232, 249, 240, 0.5)'
+                backgroundColor: 'rgba(134, 209, 130, 0.5)'
             },
             {
                 label: 'Debit',
                 data: transactions.map(transaction => transaction.type === 'debit' && transaction.amount),
                 borderWidth: 1,
-                backgroundColor: 'rgba(252, 217, 217, 0.5)'
+                backgroundColor: 'rgba(247, 125, 76, 0.5)'
             }
         ]
     );

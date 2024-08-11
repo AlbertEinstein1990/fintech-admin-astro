@@ -15,8 +15,8 @@
         [
             {
                 data: [30, 25, 20, 15, 10], // Example data, replace with actual values
-                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'],
-                hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+                backgroundColor: ['#2f374c', '#86d182', '#d5e066', '#f77d4c', '#595f70'],
+                hoverBackgroundColor: ['#2f374c', '#86d182', '#d5e066', '#f77d4c', '#595f70']
             }
         ]
     );

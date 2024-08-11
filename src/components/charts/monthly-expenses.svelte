@@ -16,8 +16,20 @@
             {
                 label: 'Monthly Expenses ($)',
                 data: [500, 450, 700, 600, 800, 750, 650, 700, 600, 650, 700, 800], // Example data, replace with actual values
-                backgroundColor: 'rgba(246, 241, 253, 0.8)',
-                borderColor: '#b891ee',
+                backgroundColor: 
+                [
+                    '#2f374c', 
+                    '#86d182', 
+                    '#d5e066', 
+                    '#f77d4c', 
+                    '#2f374c', 
+                    '#86d182', 
+                    '#d5e066', 
+                    '#f77d4c',
+                    '#c3e8c1',
+                    '#eaf0b3',
+                    '#fbbea6'
+                ],
                 borderWidth: 0.5
             }
         ]

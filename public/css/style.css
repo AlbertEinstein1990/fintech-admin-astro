@@ -62,8 +62,8 @@ form {
 }
 
 .content-loader, .icon-container-loader, .loader-line {
-  background-color: #eaebed;
-  background-image: linear-gradient(to right, #eaebed 0%, #f5f5f5 20%, #eaebed 40%, #eaebed 100%);
+  background-color: #e4e5e9;
+  background-image: linear-gradient(to right, #e4e5e9 0%, #f5f5f5 20%, #e4e5e9 40%, #e4e5e9 100%);
   background-size: 28.125rem 25rem;
   background-repeat: no-repeat;
   animation: shimer 1s linear infinite;
@@ -98,10 +98,10 @@ form {
 }
 .nav-menu__link {
   text-align: left;
-  color: #999999;
+  color: #e4e5e9;
 }
 .nav-menu__link.current {
-  color: #726aaf;
+  color: #2f374c;
 }
 .nav-menu__link:not(.current):hover {
   color: #fff;
@@ -109,13 +109,13 @@ form {
 
 .page-title {
   font-size: 1.25rem;
-  color: #4f459b;
+  color: #595f70;
 }
 
 genus-data-card {
   --card-title-font-family: "Poppins Semi Bold";
   --card-title-font-size: 0.9rem;
-  --card-title-color: #2f295d;
+  --card-title-color: #595f70;
   --card-text-font-family: "Product Sans Regular";
   --card-text-font-size: 1rem;
   --card-text-color: #999999;
@@ -124,15 +124,15 @@ genus-data-card {
 genus-chart {
   --chart-title-font-family: "Poppins Semi Bold";
   --chart-title-font-size: 1rem;
-  --chart-title-color: #2f295d;
+  --chart-title-color: #595f70;
 }
 
 genus-table {
   --table-title-font-family: "Poppins Semi Bold";
   --table-title-font-size: 1rem;
-  --table-title-color: #2f295d;
+  --table-title-color: #595f70;
   --th-font-family: "Product Sans Regular";
-  --th-font-color: #726aaf;
+  --th-font-color: #2f374c;
   --th-font-size: 0.95rem;
 }
 
@@ -140,20 +140,28 @@ genus-textbox, genus-date-picker, genus-dropdown {
   --input-label-font-family: "Product Sans Regular";
   --input-label-font-size: 0.9rem;
   --input-label-color: #70747e;
-  --input-font-color: #726aaf;
+  --input-font-color: #2f374c;
 }
 
 genus-textarea {
   --textarea-label-font-family: "Product Sans Regular";
   --textarea-label-font-size: 0.9rem;
   --textarea-label-color: #70747e;
-  --textarea-font-color: #726aaf;
+  --textarea-font-color: #2f374c;
 }
 
 genus-checkbox-group, genus-radiobtn-group {
   --group-label-font-family: "Product Sans Regular";
   --group-label-font-color: #70747e;
-  --label-text-font-color: #726aaf;
+  --label-text-font-color: #2f374c;
+}
+
+genus-checkbox-group {
+  --checked-checkbox-label-font-color: #fff;
+}
+
+genus-radiobtn-group {
+  --checked-radio-button-font-color: #fff;
 }
 
 .footer-inner {
@@ -163,7 +171,7 @@ genus-checkbox-group, genus-radiobtn-group {
   color: #404653;
 }
 .footer-inner a {
-  color: #4f459b;
+  color: #2f374c;
   font-family: "Poppins Medium";
 }
 
@@ -176,14 +184,14 @@ genus-checkbox-group, genus-radiobtn-group {
   font-family: "Poppins Semi Bold";
   font-size: 1rem;
   font-weight: normal;
-  color: #2f295d;
+  color: #595f70;
 }
 
 genus-tab-container {
   --tab-font-family: "Poppins Medium";
   --tab-font-size: 0.9rem;
-  --tab-font-color: #64468c;
-  --active-tab-font-color: #fff;
+  --tab-font-color: #fff;
+  --active-tab-font-color: #2f374c;
 }
 
 .empty-state-text {
@@ -199,8 +207,8 @@ genus-tab-container {
 }
 
 .loader-line, .icon-container-loader, .content-loader {
-  background-color: #eaebed;
-  background-image: linear-gradient(to right, #eaebed 0%, #f5f5f5 20%, #eaebed 40%, #eaebed 100%);
+  background-color: #e4e5e9;
+  background-image: linear-gradient(to right, #e4e5e9 0%, #f5f5f5 20%, #e4e5e9 40%, #e4e5e9 100%);
   background-size: 28.125rem 25rem;
   background-repeat: no-repeat;
   animation: shimer 1s linear infinite;
@@ -216,6 +224,7 @@ genus-tab-container {
   top: 0;
   padding-bottom: 2rem;
   height: 100dvh;
+  background: #2f374c;
   grid-area: sb;
 }
 
@@ -228,7 +237,7 @@ genus-tab-container {
 }
 
 .content-container {
-  background: #f4f7fb;
+  background: #fafafa;
   grid-area: cc;
 }
 
@@ -244,7 +253,7 @@ genus-tab-container {
 genus-data-card {
   --datacard-padding: 1rem;
   --datacard-background-color: #fff;
-  --icon-container-background-color: #f6f1fd;
+  --icon-container-background-color: #86d182;
 }
 
 .total-data-card {
@@ -548,10 +557,10 @@ genus-chart {
   transition: all 0.4s linear;
 }
 .nav-menu__link.current {
-  background: #edecf5;
+  background: #86d182;
 }
 .nav-menu__link:not(.current):hover {
-  background: #726aaf;
+  background: #f77d4c;
 }
 .nav-menu__link span {
   pointer-events: none;
@@ -564,8 +573,8 @@ genus-chart {
   margin-top: 0;
 }
 .sub-menu__item a {
-  background: #edecf5;
-  color: #726aaf;
+  background: #f77d4c;
+  color: #fff;
   padding: 0.6rem 0.8rem;
 }
 .sub-menu__item:first-child a {
@@ -575,7 +584,7 @@ genus-chart {
   border-radius: 0 0 0.5rem 0.5rem;
 }
 .sub-menu__item:not(:last-child) {
-  border-bottom: 0.00625rem solid #dbc8f7;
+  border-bottom: 0.00625rem solid #595f70;
 }
 
 table {
@@ -617,7 +626,7 @@ genus-table {
   --card-head-border: none;
   --card-body-border: none;
   --card-footer-border: none;
-  --thead-background-color: #edecf5;
+  --thead-background-color: #86d182;
 }
 
 .logout-form {
@@ -640,6 +649,14 @@ genus-table {
 .button:focus {
   outline: none;
 }
+.button--primary {
+  background: #f77d4c;
+  color: #fff;
+}
+.button--secondary {
+  background: #fbbea6;
+  color: #7c3f26;
+}
 
 .logout-button {
   width: 100%;
@@ -654,11 +671,6 @@ genus-table {
 
 .filter-button {
   padding: 0.6rem 1rem;
-}
-
-.filter-button, .form-button {
-  background: #726aaf;
-  color: #fff;
 }
 
 .form-button {
@@ -756,7 +768,7 @@ genus-dropdown {
   --input-border: 0.0625rem solid #cfd1d4;
   --icon-container-border: 0.0625rem solid #cfd1d4;
   --input-padding: 0.8rem;
-  --search-container-background-color: #958fc3;
+  --search-container-background-color: #86d182;
 }
 
 input[type=checkbox] {
@@ -768,18 +780,18 @@ input[type=checkbox] {
   margin-top: 0.5rem;
 }
 .menu-item-checkbox:checked + .menu-item-label {
-  background: #726aaf;
-  color: #fff;
+  background: #86d182;
+  color: #2f374c;
   font-family: "Product Sans Bold";
 }
 .menu-item-checkbox:checked + .current {
-  background: #726aaf;
-  color: #fff;
+  background: #86d182;
+  color: #2f374c;
 }
 
 genus-checkbox-group {
-  --checkbox-label-background-color: #edecf5;
-  --checked-checkbox-background-color: #726aaf;
+  --checkbox-label-background-color: #86d182;
+  --checked-checkbox-background-color: #2f374c;
   --checkbox-label-padding: 0.8rem 0.75rem;
 }
 
@@ -787,26 +799,26 @@ genus-checkbox-group {
   padding: 0.6rem 0.8rem;
   border-radius: 0.5rem;
   transition: all 0.4s linear;
-  color: #999999;
+  color: #e4e5e9;
 }
 .menu-item-label:hover {
   cursor: pointer;
-  background: #726aaf;
+  background: #f77d4c;
   color: #fff;
 }
 .menu-item-label.current {
-  background: #edecf5;
-  color: #726aaf;
+  background: #86d182;
+  color: #2f374c;
 }
 
 genus-tab-container {
-  --tab-background-color: #edecf5;
-  --active-tab-background-color: #726aaf;
+  --tab-background-color: #2f374c;
+  --active-tab-background-color: #86d182;
 }
 
 genus-radiobtn-group {
-  --radiobtn-label-background-color: #edecf5;
-  --checked-radio-button-background-color: #726aaf;
+  --radiobtn-label-background-color: #86d182;
+  --checked-radio-button-background-color: #2f374c;
   --radiobtn-label-padding: 0.8rem 0.75rem;
   --flex: 1 0 auto;
 }

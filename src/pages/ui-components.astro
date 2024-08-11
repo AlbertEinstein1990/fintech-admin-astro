@@ -70,10 +70,10 @@ import 'genus-ui';
                 </div>
                 <div class='card__body'>
                     <genus-checkbox-group label-text="Select Language(s)">
-                        <genus-checkbox-option option-id="english" option-value="English" checked-box-icon='svg/tick-square.svg'>English</genus-checkbox-option>
-                        <genus-checkbox-option option-id="spanish" option-value="Spanish" checked-box-icon='svg/tick-square.svg'>Spanish</genus-checkbox-option>
-                        <genus-checkbox-option option-id="german" option-value="German" checked-box-icon='svg/tick-square.svg'>German</genus-checkbox-option>
-                        <genus-checkbox-option option-id="chinese" option-value="Chinese" checked-box-icon='svg/tick-square.svg'>Chinese</genus-checkbox-option>
+                        <genus-checkbox-option option-id="english" option-value="English" checked-box-icon='svg/tick-square.svg' unchecked-box-icon="svg/checkbox.svg">English</genus-checkbox-option>
+                        <genus-checkbox-option option-id="spanish" option-value="Spanish" checked-box-icon='svg/tick-square.svg' unchecked-box-icon="svg/checkbox.svg">Spanish</genus-checkbox-option>
+                        <genus-checkbox-option option-id="german" option-value="German" checked-box-icon='svg/tick-square.svg' unchecked-box-icon="svg/checkbox.svg">German</genus-checkbox-option>
+                        <genus-checkbox-option option-id="chinese" option-value="Chinese" checked-box-icon='svg/tick-square.svg' unchecked-box-icon="svg/checkbox.svg">Chinese</genus-checkbox-option>
                     </genus-checkbox-group>
                 </div>
             </div>
@@ -84,10 +84,10 @@ import 'genus-ui';
                 </div>
                 <div class='card__body'>
                     <genus-checkbox-group label-text="Select Language(s)">
-                        <genus-checkbox-option option-id="english" option-value="English" checked-box-icon='svg/tick-square.svg' without-icon>English</genus-checkbox-option>
-                        <genus-checkbox-option option-id="spanish" option-value="Spanish" checked-box-icon='svg/tick-square.svg' without-icon>Spanish</genus-checkbox-option>
-                        <genus-checkbox-option option-id="german" option-value="German" checked-box-icon='svg/tick-square.svg' without-icon>German</genus-checkbox-option>
-                        <genus-checkbox-option option-id="chinese" option-value="Chinese" checked-box-icon='svg/tick-square.svg' without-icon>Chinese</genus-checkbox-option>
+                        <genus-checkbox-option option-id="english" option-value="English" without-icon>English</genus-checkbox-option>
+                        <genus-checkbox-option option-id="spanish" option-value="Spanish" without-icon>Spanish</genus-checkbox-option>
+                        <genus-checkbox-option option-id="german" option-value="German" without-icon>German</genus-checkbox-option>
+                        <genus-checkbox-option option-id="chinese" option-value="Chinese" without-icon>Chinese</genus-checkbox-option>
                     </genus-checkbox-group>
                 </div>
             </div>
@@ -97,7 +97,7 @@ import 'genus-ui';
                     <h4 class='card__head__title'>Radio Button Group | Default</h4>
                 </div>
                 <div class='card__body'>
-                    <genus-radiobtn-group class="languages" label-text="Select a language" options={languages} checked-radio-icon='svg/tick-circle.svg' name="language"></genus-radiobtn-group>
+                    <genus-radiobtn-group class="languages" label-text="Select a language" options={languages} checked-radio-icon='svg/tick-circle.svg' unchecked-radio-icon="svg/radio button.svg" name="language"></genus-radiobtn-group>
                 </div>
             </div>
         </div>
@@ -108,7 +108,7 @@ import 'genus-ui';
                     <h4 class='card__head__title'>Radio Button Group | Without Icon</h4>
                 </div>
                 <div class='card__body'>
-                    <genus-radiobtn-group class="languages" label-text="Select a language" options={languages} checked-radio-icon='svg/tick-circle.svg' name="language" without-icon></genus-radiobtn-group>
+                    <genus-radiobtn-group class="languages" label-text="Select a language" options={languages} name="language" without-icon></genus-radiobtn-group>
                 </div>
             </div>
             
@@ -120,7 +120,7 @@ import 'genus-ui';
         <div class='data-section section'>
             <genus-table table-title="Data Table" table-headers={JSON.stringify(headers)} data-source={JSON.stringify(transactions)} specific-columns={JSON.stringify(specificColumns)} results-per-page="4" key="id" with-pagination>
                 <div class="controls" slot="filter-controls">
-                    <button class="filter-button button">Filter</button>
+                    <button class="filter-button button button--primary">Filter</button>
                 </div>
             </genus-table>
         </div>
