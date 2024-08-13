@@ -1,7 +1,24 @@
 ---
 import Layout from "@src/layouts/layout.astro";
+import { header, specificColumns } from "@controllers/transactions.controllers";
+import transactions from '@src/data/transactions.json';
+import TransactionHistoryTable from "@components/transaction-history-table.svelte";
+import renderStatusHtml from "@utils/status";
+
+transactions.forEach(transaction => transaction['type_html'] = renderStatusHtml(transaction.type))
+
+let transactionHistory = [...transactions];
 ---
 
 <Layout title="Transaction History">
-
+    <div class="main-content-inner inner-content">
+        <div class="transactions-section section">
+            <TransactionHistoryTable
+                headers={header}
+                specificColumns={specificColumns}
+                transactions={JSON.stringify(transactionHistory)}
+                client:only="svelte"
+            />
+        </div>
+    </div>
 </Layout>

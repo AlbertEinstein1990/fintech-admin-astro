@@ -259,6 +259,10 @@ genus-tab-container {
   grid-column: 1/-1;
 }
 
+.filter-content {
+  position: relative;
+}
+
 genus-data-card {
   --datacard-padding: 1rem;
   --datacard-background-color: #fff;
@@ -556,6 +560,18 @@ genus-chart {
        column-gap: 0.5rem;
 }
 
+.modal-content {
+  display: flex;
+  row-gap: 1.875rem;
+  flex-direction: column;
+}
+
+.buttons, .action-buttons {
+  display: flex;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+
 .header {
   width: -webkit-fill-available;
   height: 6.25rem;
@@ -666,6 +682,7 @@ genus-table {
   text-align: center;
   font-family: "Product Sans Regular", sans-serif;
   font-size: 0.875rem;
+  width: -webkit-fill-available;
 }
 .button:focus {
   outline: none;

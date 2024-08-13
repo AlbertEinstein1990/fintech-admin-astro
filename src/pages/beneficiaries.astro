@@ -1,20 +1,20 @@
 ---
 import Layout from "@src/layouts/layout.astro";
+import { header, specificColumns } from "@controllers/beneficiaries.controllers";
+import beneficiaries from '@src/data/beneficiaries.json';
+import BeneficiariesTable from "@components/beneficiaries-table.svelte";
 import 'genus-ui';
 ---
 
 <Layout title="Beneficiaries">
     <div class="main-content-inner inner-content">
         <div class="beneficiarires-section section">
-            <genus-table table-title="Your Beneficiaries" with-pagination>
-                <div class="filter-controls" slot="filter-controls">
-                    <button class="filter-button button button--secondary">
-                        <i class="iconly-Filter icbo"></i>
-                    </button>
-
-                    <button class="button button--primary">Add Beneficiary</button>
-                </div>
-            </genus-table>
+            <BeneficiariesTable
+                headers={header}
+                beneficiaries={JSON.stringify(beneficiaries)} 
+                specificColumns={specificColumns}                
+                client:only="svelte"
+            />
         </div>
     </div>
 </Layout>
