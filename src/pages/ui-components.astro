@@ -117,7 +117,7 @@ import 'genus-ui';
             <DatePickerNoLabel client:only="svelte" />            
         </div>
 
-        <div class='data-section section'>
+        <div class='section'>
             <genus-table table-title="Data Table" table-headers={JSON.stringify(headers)} data-source={JSON.stringify(transactions)} specific-columns={JSON.stringify(specificColumns)} results-per-page="4" key="id" with-pagination>
                 <div class="filter-controls" slot="filter-controls">
                     <button class="filter-button button button--primary">Filter</button>

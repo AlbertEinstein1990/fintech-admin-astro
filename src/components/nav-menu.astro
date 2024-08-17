@@ -1,41 +1,46 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
 <ul class="nav-menu">
     <li class="nav-menu__item">
-        <a class="nav-menu__link" href="/dashboard">
+        <a class={currentPath === "dashboard" ? "nav-menu__link current" : "nav-menu__link"} href="/dashboard">
             <i class="iconly-Home icbo menu-icon"></i>
             <span>Dashboard</span>
         </a>
     </li>
     
     <li class="nav-menu__item">
-        <a class="nav-menu__link" href="/beneficiaries">
+        <a class={currentPath === "beneficiaries" ? "nav-menu__link current" : "nav-menu__link"} href="/beneficiaries">
             <i class="iconly-User3 icbo menu-icon"></i>
             <span>Beneficiaries</span>
         </a>
     </li>
     
     <li class="nav-menu__item">
-        <a class="nav-menu__link" href="/transaction-history">
+        <a class={currentPath === "transaction-history" ? "nav-menu__link current" : "nav-menu__link"} href="/transaction-history">
             <i class="iconly-Activity icbo menu-icon"></i>
             <span>Transaction History</span>
         </a>
     </li>
     
     <li class="nav-menu__item">
-        <a class="nav-menu__link" href="/loan-apps">
+        <a class={currentPath === "loan-apps" ? "nav-menu__link current" : "nav-menu__link"} href="/loan-apps">
             <i class="iconly-Document icbo menu-icon"></i>
             <span>Loan Applications</span>
         </a>
     </li>
     
     <li class="nav-menu__item">
-        <a class="nav-menu__link" href="/bills">
+        <a class={currentPath === "bills" ? "nav-menu__link current" : "nav-menu__link"} href="/bills">
             <i class="iconly-Ticket icbo menu-icon"></i>
             <span>Bill Payments</span>
         </a>
     </li>
     
     <li class="nav-menu__item">
-        <a class="nav-menu__link" href="/ui-components">
+        <a class={currentPath === "ui-components" ? "nav-menu__link current" : "nav-menu__link"} href="/ui-components">
             <i class="iconly-Category icbo menu-icon"></i>
             <span>UI Components</span>
         </a>
@@ -45,7 +50,7 @@
         <input class="menu-item-checkbox" 
         type="checkbox" id="forms-menu-item-checkbox">
         
-        <label class="label menu-item-label" for="forms-menu-item-checkbox">
+        <label class={(currentPath === "forms/login" || currentPath === "forms/registration") ? "label menu-item-label current" : "label menu-item-label"} for="forms-menu-item-checkbox">
             <i class="iconly-User2 icbo menu-icon"></i>
             <span>Forms</span>
             <i class="arrow-down-icon icli iconly-Arrow-Down-2 menu-icon"></i>	
@@ -63,30 +68,16 @@
     </li>
     
     <li class="nav-menu__item">
-        <a class="nav-menu__link" href="/charts">
+        <a class={currentPath === "charts" ? "nav-menu__link current" : "nav-menu__link"} href="/charts">
             <i class="iconly-Chart icbo menu-icon"></i>
             <span>Charts</span>
         </a>
     </li>
     
     <li class="nav-menu__item">
-        <a class="nav-menu__link" href="/user-profile">
+        <a class={currentPath === "user-profile" ? "nav-menu__link current" : "nav-menu__link"} href="/user-profile">
             <i class="iconly-Profile icbo menu-icon"></i>
             <span>Profile</span>
         </a>
     </li>
 </ul>
-
-<script>
-    const navLinks = document.querySelectorAll(".nav-menu__link");
-    const menuLabel = document.querySelector('.menu-item-label');
-    const pathName = window.location.pathname;
-    
-    navLinks.forEach(link => 
-    {
-        if (link.getAttribute('href') === pathName) { link.classList.add("current"); }
-    });
-    
-    if(pathName === '/forms/login' || pathName === '/forms/registration') { menuLabel.classList.add('current'); }
-    else { menuLabel.classList.remove('current'); }
-</script>
