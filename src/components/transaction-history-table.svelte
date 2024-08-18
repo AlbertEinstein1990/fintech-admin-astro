@@ -33,5 +33,5 @@
     export let headers;
     export let specificColumns;
     export let transactions;
-    export let tableTitle;
+    //export let tableTitle;
 </script>

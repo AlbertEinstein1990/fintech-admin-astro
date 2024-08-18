@@ -682,7 +682,6 @@ genus-table {
   text-align: center;
   font-family: "Product Sans Regular", sans-serif;
   font-size: 0.875rem;
-  width: -webkit-fill-available;
 }
 .button:focus {
   outline: none;
@@ -724,6 +723,10 @@ genus-table {
 
 .register-button {
   grid-column: 1/-1;
+}
+
+.buttons > * {
+  width: -webkit-fill-available;
 }
 
 .icon {
