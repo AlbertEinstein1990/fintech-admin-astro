@@ -20,8 +20,11 @@
 .menu-item-label
     +css-grid($template-columns: max-content 1fr max-content, $column-gap: 0.5rem, $align-items: center)
 
-.charts-section
-    +css-grid($template-columns: repeat(2, calc(50% - 0.9375rem)), $column-gap: 1.875rem)
-
 .action-form, .profile-form
     +css-grid($template-columns: repeat(2, 1fr), $column-gap: 1.5625rem, $row-gap: 1.875rem)
+
+.two-column-grid
+    +css-grid($template-columns: repeat(2, calc(50% - 0.9375rem)), $column-gap: 1.875rem)
+
+.three-column-grid
+    +css-grid($template-columns: repeat(3, 1fr), $column-gap: 1.875rem)

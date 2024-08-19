@@ -1,0 +1,42 @@
+---
+import payments from '@data/payment-history.json';
+import Layout from '@src/layouts/layout.astro';
+import 'genus-ui';
+
+export async function getStaticPaths() 
+{
+    return payments.flatMap(payment => 
+    {
+        return [ { params: { id: payment.payment_id } } ]
+    }) 
+}
+
+let { id } = Astro.params;
+let paymentObject = payments.filter(payment => payment.payment_id === id)[0];
+---
+
+<Layout title=`Payment ID - ${id}`>
+    <div class="main-content-inner inner-content">
+        <div class='card payment-card'>
+            <div class='card__head'>
+                <h4 class='card__head__title'>Payment Details</h4>
+            </div>
+
+            <div class='card__body'>
+                <form action="" class="action-form">
+                    <genus-textbox label-text="Biller Name" input-value={paymentObject.biller_name} without-icon read-only></genus-textbox>
+                    
+                    <genus-textbox label-text="Biller Account Number" input-value={paymentObject.biller_account_number} without-icon read-only></genus-textbox>
+                    
+                    <genus-textbox label-text="Amount" input-value={`$${paymentObject.amount}`} without-icon read-only></genus-textbox>
+                    
+                    <genus-textbox label-text="Payment Date" input-value={paymentObject.payment_date} without-icon read-only></genus-textbox>
+                    
+                    <genus-textbox label-text="Payment Method" input-value={paymentObject.payment_method} without-icon read-only></genus-textbox>
+                    
+                    <genus-textbox label-text="Status" input-value={paymentObject.status} without-icon read-only></genus-textbox>
+                </form>
+            </div>
+        </div>
+    </div>
+</Layout>

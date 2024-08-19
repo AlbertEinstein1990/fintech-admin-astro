@@ -4,7 +4,8 @@
     data-source={dataSource} 
     specific-columns={specificColumns}
     row-actions={rowActions}
-    key="payment_id">
+    key="payment_id"
+    anchor-attribute-value="/bills/">
     <div class="filter-controls" slot="filter-controls">
         <button class="filter-button button button--secondary">
             <i class="iconly-Filter icbo"></i>

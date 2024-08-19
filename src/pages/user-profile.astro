@@ -21,7 +21,7 @@ import 'genus-ui';
                     
                             <genus-textbox label-text='Last Name' without-icon></genus-textbox>
 
-                            <genus-radiobtn-group label-text='Gender' options={genderOptions} checked-radio-icon='svg/tick-circle.svg' unchecked-radio-icon="svg/radio button.svg" name='gender'></genus-radiobtn-group>
+                            <genus-radiobtn-group class="gender-group" label-text='Gender' options={genderOptions} checked-radio-icon='svg/tick-circle.svg' unchecked-radio-icon="svg/radio button.svg" name='gender'></genus-radiobtn-group>
 
                             <DateOfBirthPicker client:only="svelte" />
 
@@ -32,7 +32,7 @@ import 'genus-ui';
                                 <genus-dropdown-option option-value='canadian'>Canadian</genus-dropdown-option>
                             </genus-dropdown>
 
-                            <genus-radiobtn-group label-text='Any Physical Disabilities ?' options={disabilityOptions} checked-radio-icon='svg/tick-circle.svg' unchecked-radio-icon="svg/radio button.svg" name='ability'></genus-radiobtn-group>
+                            <genus-radiobtn-group class="abilities-group" label-text='Any Physical Disabilities ?' options={disabilityOptions} checked-radio-icon='svg/tick-circle.svg' unchecked-radio-icon="svg/radio button.svg" name='ability'></genus-radiobtn-group>
                         </form>
                     </genus-tab-content>
 
