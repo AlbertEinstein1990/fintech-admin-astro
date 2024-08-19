@@ -1,7 +1,39 @@
 ---
 import Layout from "@src/layouts/layout.astro";
+import PaymentHistoryTable from '@components/payment-history-table.svelte';
+import { headers, specificColumns, rowActions } from '@controllers/bills.controllers';
+import paymentHistory from '@data/payment-history.json';
+import 'genus-ui';
 ---
 
 <Layout title="Bills Payment">
+    <div class="main-content-inner inner-content">
+        <div class="data-cards-section bills-category-section section">
+            <genus-data-card card-title="Electricity" card-value="Payments for electricity usage" data-card-icon="/svg/bill category/electricity.svg" layout-direction="column"></genus-data-card>
+            
+            <genus-data-card card-title="Water" card-value="Payments for water supply" data-card-icon="/svg/bill category/water.svg" layout-direction="column"></genus-data-card>
+            
+            <genus-data-card card-title="Gas" card-value="Payments for natural gas supply" data-card-icon="/svg/bill category/gas.svg" layout-direction="column"></genus-data-card>
+            
+            <genus-data-card card-title="Internet" card-value="Payments for internet services" data-card-icon="/svg/bill category/internet.svg" layout-direction="column"></genus-data-card>
+            
+            <genus-data-card card-title="Mobile" card-value="Payments for mobile phone services" data-card-icon="/svg/bill category/mobile.svg" layout-direction="column"></genus-data-card>
+            
+            <genus-data-card card-title="Insurance" card-value="Payments for insurance" data-card-icon="/svg/bill category/insurance.svg" layout-direction="column"></genus-data-card>
+            
+            <genus-data-card card-title="Credit Card" card-value="Payments towards credit card bills" data-card-icon="/svg/bill category/credit card.svg" layout-direction="column"></genus-data-card>
+            
+            <genus-data-card card-title="Streaming Service" card-value="Payments for subscriptions" data-card-icon="/svg/bill category/streaming.svg" layout-direction="column"></genus-data-card>
+        </div>
 
+        <div class="payment-history-section section">
+            <PaymentHistoryTable 
+                {headers} 
+                {specificColumns} 
+                dataSource={JSON.stringify(paymentHistory)}
+                rowActions={JSON.stringify(rowActions)}
+                client:only="svelte"
+            />
+        </div>
+    </div>
 </Layout>
