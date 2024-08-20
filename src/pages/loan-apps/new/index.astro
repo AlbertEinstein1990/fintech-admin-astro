@@ -1,0 +1,15 @@
+---
+import Layout from "@src/layouts/layout.astro"
+import LoanAppWizard from '@components/loan-app-wizard.svelte';
+import { titles, maritalStatus, jobLevelOptions, natureOfEmploymentOptions } from '@controllers/loans.controller';
+---
+
+<Layout title="New Loan">
+    <LoanAppWizard 
+        {titles} 
+        {maritalStatus}
+        jobLevels={jobLevelOptions}
+        natureOfEmploymnet={natureOfEmploymentOptions}
+        client:only="svelte">
+    </LoanAppWizard>
+</Layout>

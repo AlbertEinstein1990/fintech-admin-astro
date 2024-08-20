@@ -205,6 +205,16 @@ genus-tab-container {
   --active-tab-font-color: #2f374c;
 }
 
+.step-content .content-title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #595f70;
+}
+.step-content .content-text {
+  text-align: center;
+}
+
 .empty-state-text {
   font-size: 0.85rem;
   color: #999999;
@@ -506,6 +516,12 @@ genus-chart {
   grid-column-gap: 1.875rem;
 }
 
+.step-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 0.75rem;
+}
+
 .content-container, .input-card .card__body > * {
   display: flex;
   flex-direction: column;
@@ -575,6 +591,12 @@ genus-chart {
   display: flex;
   -moz-column-gap: 0.75rem;
        column-gap: 0.75rem;
+}
+
+.step-content {
+  display: flex;
+  row-gap: 1.875rem;
+  flex-direction: column;
 }
 
 .header {
@@ -673,6 +695,12 @@ genus-table {
 
 .logout-form {
   padding: 0 1.25rem;
+}
+
+.step-form {
+  padding: 1.25rem 1.875rem;
+  border-radius: 0.375rem;
+  background: #fff;
 }
 
 .footer {
@@ -879,6 +907,14 @@ genus-radiobtn-group {
   --flex: 1 0 auto;
 }
 
+.step-content genus-radiobtn-group {
+  --radiobtn-label-background-color: none;
+  --radiobtn-label-border-radius: 0;
+  --radiobtn-label-padding: 0.9rem 0;
+  --checked-radio-button-font-color: #f77d4c;
+  --checked-radio-button-background-color: none;
+}
+
 .charts-section > * {
   --chart-head-padding: 1.25rem 1rem;
   --chart-body-padding: 0 1rem 1.2rem;
@@ -902,4 +938,12 @@ genus-textarea {
 
 .bills-category-section > * {
   --card-text-font-size: 0.85rem;
+}
+
+genus-step-wizard {
+  --progress-bar-background-color: #2f374c;
+  --title-color: #fff;
+  --current-progress-bar-background-color: #86d182;
+  --current-title-color: #2f374c;
+  --step-controls-margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
