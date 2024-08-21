@@ -108,10 +108,24 @@
             </div>
             
             <div class="bottom-content">
-                <form action="" class="action-form step-form personal-detail-form">
-                    <genus-textbox label-text="Full Name"></genus-textbox>
-                    <genus-textbox label-text="Spoken Language" without-icon></genus-textbox>
-                    <genus-textbox label-text="Date of Birth" input-type="date"></genus-textbox>
+                <form action="" class="action-form step-form">
+                    <genus-textbox label-text='Loan Amount (Min. Amount - USD 200)' input-type='number' input-icon='/svg/number.svg'></genus-textbox>
+
+                    <genus-dropdown label-text='Purpose of Loan'>
+                        <genus-dropdown-option option-value=''>Select purpose</genus-dropdown-option>
+
+                        {#each loanPurposes as  loanPurpose}
+                            <genus-dropdown-option option-value={loanPurpose}>{loanPurpose}</genus-dropdown-option>
+                        {/each}
+                    </genus-dropdown>
+                    
+                    <genus-dropdown label-text='Loan Term' input-value={loanTenure} on:selected={getInterestRate}>
+                        {#each loanTenures as  loanTenure}
+                            <genus-dropdown-option option-value={loanTenure}>{loanTenure}</genus-dropdown-option>
+                        {/each}
+                    </genus-dropdown>
+
+                    <genus-textbox label-text="Interest Rate" input-value={interestRate} without-icon></genus-textbox>
                 </form>
             </div>
         </div>
@@ -125,10 +139,18 @@
             </div>
             
             <div class="bottom-content">
-                <form action="" class="action-form step-form personal-detail-form">
-                    <genus-textbox label-text="Full Name"></genus-textbox>
-                    <genus-textbox label-text="Spoken Language" without-icon></genus-textbox>
-                    <genus-textbox label-text="Date of Birth" input-type="date"></genus-textbox>
+                <form action="" class="action-form step-form">
+                    <genus-dropdown label-text='Bank Name'>
+                        <genus-dropdown-option option-value=''>Select purpose</genus-dropdown-option>
+                        <genus-dropdown-option option-value='bank-1'>Bank 1</genus-dropdown-option>
+                        <genus-dropdown-option option-value='bank-2'>Bank 2</genus-dropdown-option>
+                    </genus-dropdown>
+                    
+                    <genus-textbox label-text="Account Number" input-type='number' input-icon='/svg/number.svg'></genus-textbox>
+                    
+                    <genus-textbox label-text="BVN" input-type='number' input-icon='/svg/number.svg'></genus-textbox>
+                    
+                    <genus-textbox label-text="NIN" input-type='number' input-icon='/svg/number.svg'></genus-textbox>
                 </form>
             </div>
         </div>
@@ -145,7 +167,18 @@
 
     let direction = '',
         currentStep = 0,
-        steps = 5;
+        steps = 5,
+        interestRates = 
+        {
+            "6 months": '5%',
+            "12 months": '4.5%',
+            "18 months": '4%',
+            "24 months": '3.5%',
+            "36 months": '3%',
+            "48 months": '2.5%'
+        },
+        interestRate = '',
+        loanTenure = '';
 
     const goToNextStep = () => 
         {
@@ -162,10 +195,13 @@
                 currentStep -= 1;
                 direction = 'prev';
             }
-        }
+        },
+        getInterestRate = e => { interestRate = interestRates[e.detail] || '' };
 
     export let titles;
     export let maritalStatus;
     export let jobLevels;
     export let natureOfEmploymnet;
+    export let loanPurposes;
+    export let loanTenures;
 </script>
