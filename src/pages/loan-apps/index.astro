@@ -2,6 +2,11 @@
 import Layout from "@src/layouts/layout.astro";
 import { headers, specificColumns } from "@controllers/loans.controller";
 import loanApplications from '@data/loan-applications.json';
+import renderStatusHtml from "@utils/status";
+
+loanApplications.forEach(loanApplication => { loanApplication['status_html'] = renderStatusHtml(loanApplication.status)});
+
+let applications = [...loanApplications];
 ---
 
 <Layout title="Loan Applications">
@@ -21,7 +26,7 @@ import loanApplications from '@data/loan-applications.json';
                 table-title="Applications" 
                 table-headers={headers}
                 specific-columns={specificColumns}
-                data-source={JSON.stringify(loanApplications)}>
+                data-source={JSON.stringify(applications)}>
                 <div class="filter-controls" slot="filter-controls">
                     <button class="filter-button button button--secondary">
                         <i class="iconly-Filter icbo"></i>

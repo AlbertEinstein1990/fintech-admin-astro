@@ -1,6 +1,6 @@
 const headers = JSON.stringify(['Loan Name', 'Amount (=N=)', 'Interest Rate (%)', 'Tenure (Months)', 'Status', 'Date and Time']);
 
-const specificColumns = JSON.stringify(['loan_name', 'amount', 'interest_rate', 'loan_tenure', 'status', 'date_time'])
+const specificColumns = JSON.stringify(['loan_name', 'amount', 'interest_rate', 'loan_tenure', 'status_html', 'date_time'])
 
 const titles = JSON.stringify(['Personal Information', 'Contact Details', 'Employment Details', 'Loan Details', 'Financial Information'])
 
