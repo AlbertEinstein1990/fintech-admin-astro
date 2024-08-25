@@ -9,13 +9,13 @@ import 'genus-ui';
 <Layout title="UI Components">
     <div class="main-content-inner component-content inner-content">
         <div class='data-cards-section section'>
-            <genus-data-card class='total-data-card' card-title='Total Users' card-value='800' data-card-icon='svg/customers icon/total.svg'></genus-data-card>
+            <genus-data-card class='total-data-card' card-title='Total Users' card-value='800' data-card-icon='/svg/customers icon/total.svg'></genus-data-card>
             
-            <genus-data-card class='active-data-card' card-title='Active Users' card-value='300' data-card-icon='svg/customers icon/active.svg'></genus-data-card>
+            <genus-data-card class='active-data-card' card-title='Active Users' card-value='300' data-card-icon='/svg/customers icon/active.svg'></genus-data-card>
             
-            <genus-data-card class='inactive-data-card' card-title='Inactive Users' card-value='200' data-card-icon='svg/customers icon/inactive.svg'></genus-data-card>
+            <genus-data-card class='inactive-data-card' card-title='Inactive Users' card-value='200' data-card-icon='/svg/customers icon/inactive.svg'></genus-data-card>
             
-            <genus-data-card class='suspended-data-card' card-title='Suspended Users' card-value='300' data-card-icon='svg/customers icon/suspended.svg'></genus-data-card>
+            <genus-data-card class='suspended-data-card' card-title='Suspended Users' card-value='300' data-card-icon='/svg/customers icon/suspended.svg'></genus-data-card>
         </div>
 
         <div class='input-controls three-column-grid section'>
@@ -24,11 +24,11 @@ import 'genus-ui';
                     <h4 class='card__head__title'>Input | Default</h4>
                 </div>
                 <div class='card__body'>
-                    <genus-textbox label-text='Full Name' input-icon='svg/profile.svg'></genus-textbox>
+                    <genus-textbox label-text='Full Name' input-icon='/svg/profile.svg'></genus-textbox>
                     
-                    <genus-textbox label-text='Email' input-type='email' input-icon='svg/message.svg'></genus-textbox>
+                    <genus-textbox label-text='Email' input-type='email' input-icon='/svg/message.svg'></genus-textbox>
                     
-                    <genus-textbox label-text="Enter phone number" data-pattern="(xxx) xxx xxx xxxx" disallowed-characters="^[a-zA-Z\s!@#%^&*+=._-]+$" input-icon='svg/phone.svg' format-input></genus-textbox>
+                    <genus-textbox label-text="Enter phone number" data-pattern="(xxx) xxx xxx xxxx" disallowed-characters="^[a-zA-Z\s!@#%^&*+=._-]+$" input-icon='/svg/phone.svg' format-input></genus-textbox>
                 </div>
             </div>
             
@@ -37,13 +37,13 @@ import 'genus-ui';
                     <h4 class='card__head__title'>Input | Without Label</h4>
                 </div>
                 <div class='card__body'>
-                    <genus-textbox placeholder-text='Full Name' input-icon='svg/profile.svg' without-label></genus-textbox>
+                    <genus-textbox placeholder-text='Full Name' input-icon='/svg/profile.svg' without-label></genus-textbox>
                     
-                    <genus-textbox placeholder-text='Email' input-type='email' input-icon='svg/message.svg' without-label></genus-textbox>
+                    <genus-textbox placeholder-text='Email' input-type='email' input-icon='/svg/message.svg' without-label></genus-textbox>
                     
-                    <genus-textbox placeholder-text="Enter phone number" data-pattern="(xxx) xxx xxx xxxx" disallowed-characters="^[a-zA-Z\s!@#%^&*+=._-]+$" input-icon='svg/phone.svg' format-input without-label></genus-textbox>
+                    <genus-textbox placeholder-text="Enter phone number" data-pattern="(xxx) xxx xxx xxxx" disallowed-characters="^[a-zA-Z\s!@#%^&*+=._-]+$" input-icon='/svg/phone.svg' format-input without-label></genus-textbox>
 
-                    <genus-textbox class="number" input-type="number" placeholder-text="Enter number" input-icon='svg/number.svg' without-label></genus-textbox>
+                    <genus-textbox class="number" input-type="number" placeholder-text="Enter number" input-icon='/svg/number.svg' without-label></genus-textbox>
                 </div>
             </div>
             
@@ -70,10 +70,10 @@ import 'genus-ui';
                 </div>
                 <div class='card__body'>
                     <genus-checkbox-group label-text="Select Language(s)">
-                        <genus-checkbox-option option-id="english" option-value="English" checked-box-icon='svg/tick-square.svg' unchecked-box-icon="svg/checkbox.svg">English</genus-checkbox-option>
-                        <genus-checkbox-option option-id="spanish" option-value="Spanish" checked-box-icon='svg/tick-square.svg' unchecked-box-icon="svg/checkbox.svg">Spanish</genus-checkbox-option>
-                        <genus-checkbox-option option-id="german" option-value="German" checked-box-icon='svg/tick-square.svg' unchecked-box-icon="svg/checkbox.svg">German</genus-checkbox-option>
-                        <genus-checkbox-option option-id="chinese" option-value="Chinese" checked-box-icon='svg/tick-square.svg' unchecked-box-icon="svg/checkbox.svg">Chinese</genus-checkbox-option>
+                        <genus-checkbox-option option-id="english" option-value="English" checked-box-icon='/svg/tick-square.svg' unchecked-box-icon="/svg/checkbox.svg">English</genus-checkbox-option>
+                        <genus-checkbox-option option-id="spanish" option-value="Spanish" checked-box-icon='/svg/tick-square.svg' unchecked-box-icon="/svg/checkbox.svg">Spanish</genus-checkbox-option>
+                        <genus-checkbox-option option-id="german" option-value="German" checked-box-icon='/svg/tick-square.svg' unchecked-box-icon="/svg/checkbox.svg">German</genus-checkbox-option>
+                        <genus-checkbox-option option-id="chinese" option-value="Chinese" checked-box-icon='/svg/tick-square.svg' unchecked-box-icon="/svg/checkbox.svg">Chinese</genus-checkbox-option>
                     </genus-checkbox-group>
                 </div>
             </div>
@@ -97,7 +97,7 @@ import 'genus-ui';
                     <h4 class='card__head__title'>Radio Button Group | Default</h4>
                 </div>
                 <div class='card__body'>
-                    <genus-radiobtn-group class="languages" label-text="Select a language" options={languages} checked-radio-icon='svg/tick-circle.svg' unchecked-radio-icon="svg/radio button.svg" name="language"></genus-radiobtn-group>
+                    <genus-radiobtn-group class="languages" label-text="Select a language" options={languages} checked-radio-icon='/svg/tick-circle.svg' unchecked-radio-icon="/svg/radio button.svg" name="language"></genus-radiobtn-group>
                 </div>
             </div>
         </div>
