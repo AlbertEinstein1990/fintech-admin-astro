@@ -7,9 +7,9 @@
             <div class="modal-container" class:modal-container--show='{isVisible}'>
                 <div class="modal-content">
                     <div class="modal-content__body">
-                        <genus-textbox class="search-textbox" placeholder-text="Search by name" input-icon='svg/profile.svg' without-label></genus-textbox>
+                        <genus-textbox class="search-textbox" placeholder-text="Search by name" input-icon='/svg/profile.svg' without-label></genus-textbox>
                         
-                        <genus-textbox class="search-textbox" input-type="number" placeholder-text="Search by account number" input-icon='svg/number.svg' without-label></genus-textbox>
+                        <genus-textbox class="search-textbox" input-type="number" placeholder-text="Search by account number" input-icon='/svg/number.svg' without-label></genus-textbox>
                     </div>
                     <div class="buttons" slot="actions">
                         <button class="button button--secondary">Reset</button>

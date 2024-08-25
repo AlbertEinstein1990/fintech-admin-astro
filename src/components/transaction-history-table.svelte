@@ -7,9 +7,9 @@
             <div class="modal-container" class:modal-container--show='{isVisible}'>
                 <div class="modal-content">
                     <div class="modal-content__body">
-                        <genus-date-picker placeholder-text="Select date" input-icon='svg/calendar.svg' without-label></genus-date-picker>
+                        <genus-date-picker placeholder-text="Select date" input-icon='/svg/calendar.svg' without-label></genus-date-picker>
                         
-                        <genus-dropdown class="status-dropdown" placeholder-text="Select transaction type" dropdown-icon='svg/down-arrow.svg' without-label>
+                        <genus-dropdown class="status-dropdown" placeholder-text="Select transaction type" dropdown-icon='/svg/down-arrow.svg' without-label>
                             <genus-dropdown-option option-value="credit">Credit</genus-dropdown-option>
                             <genus-dropdown-option option-value="debit">Debit</genus-dropdown-option>
                         </genus-dropdown>
