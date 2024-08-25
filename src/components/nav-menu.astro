@@ -1,8 +1,6 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.replace('/', ''); //replace '/' with empty string
-
-console.log(pathname, currentPath);
 ---
 
 <ul class="nav-menu">
@@ -82,4 +80,7 @@ console.log(pathname, currentPath);
             <span>Profile</span>
         </a>
     </li>
+
+    <li class="nav-menu__item">{pathname}</li>
+    <li class="nav-menu__item">{currentPath}</li>
 </ul>
